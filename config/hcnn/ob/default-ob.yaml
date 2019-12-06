@@ -1,0 +1,24 @@
+ScalarFaultType: bitFlip-element
+TensorFaultType: bitFlip-element
+
+Ops:
+- ADD = 1.0
+- SUB = 1.0
+- MUL = 1.0
+- MATMUL = 1.0
+- RELU = 1.0
+- SIGMOID = 1.0
+- CONV2D = 1.0
+- MAX-POOL = 1.0
+
+Instances:
+- ADD = 34
+- SUB = 12
+- MUL = 24
+- MATMUL = 1
+- RELU = 9
+- SIGMOID = 8
+- CONV2D = 17
+- MAX-POOL = 3
+
+InjectMode: "oneFaultPerRun"
