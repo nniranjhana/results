@@ -7,6 +7,9 @@ y2 = np.loadtxt('results/cnn/eb/allsdc.csv', delimiter='\n', unpack=True)
 y3 = np.loadtxt('results/lenet/eb/allsdc.csv', delimiter='\n', unpack=True)
 y4 = np.loadtxt('results/alexnet/eb/allsdc.csv', delimiter='\n', unpack=True)
 y5 = np.loadtxt('results/fcn/eb/allsdc.csv', delimiter='\n', unpack=True)
+y6 = np.loadtxt('results/hcnn/eb/allsdc.csv', delimiter='\n', unpack=True)
+y7 = np.loadtxt('results/rnn/eb/allsdc.csv', delimiter='\n', unpack=True)
+y8 = np.loadtxt('results/vgg11/eb/allsdc.csv', delimiter='\n', unpack=True)
 
 
 fig, ax = plt.subplots()
@@ -16,12 +19,16 @@ ax.plot(x,y2, label='CNN')
 ax.plot(x,y3, label='LeNet')
 ax.plot(x,y4, label='AlexNet')
 ax.plot(x,y5, label='FCN')
+ax.plot(x,y6, label='HCNN')
+ax.plot(x,y7, label='RNN')
+ax.plot(x,y8, label='VGG11')
+
 
 ax.legend()
 ax.plot()
-ax.set(xlabel="Error rate (Bit flip element)", ylabel="SDC rate over 1000 injections on 10 inputs",
+ax.set(xlabel="Error rate (Bit flip element)", ylabel="SDC rate",
 	title="SDC rate vs FI error rate")
 ax.grid()
 
-fig.savefig("EB-5.png")
+fig.savefig("EB-8-1.png")
 plt.show()
